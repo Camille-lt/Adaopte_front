@@ -1,9 +1,9 @@
-const Header = () => {
-    return (
-        <header>
-            <h1>Bienvenue sur Adaopte</h1>
-        </header>
-    );
-};
+// const Header = () => {
+//     return (
+//         // <header>
+//         //     <h1>Bienvenue sur Adaopte</h1>
+//         // </header>
+//     )
+// };
 
-export default Header;
+// export default Header;
