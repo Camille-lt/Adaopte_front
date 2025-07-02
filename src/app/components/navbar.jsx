@@ -13,7 +13,7 @@ export default function Navbar() {
       </Link>
     </li>
     <li>
-      <Link href="/about" style={{ color: 'white', textDecoration: 'none' }}>
+      <Link href="/j-adopte" style={{ color: 'white', textDecoration: 'none' }}>
         J'adopte
       </Link>
     </li>
