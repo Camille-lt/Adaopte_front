@@ -26,11 +26,12 @@ export default function  AdoptPage() {
             <SearchBar onSearch={handleSearch}/>
 
             <ul>
-                {searchResults.map((animal, index) => {
+                {searchResults.map((animal, index) => (
                     <li key={index}>
                         {animal.name} ({animal.type} - {animal.location})
                     </li>
-                })}
+                ) 
+                )}
             </ul>
         </div>
     );
