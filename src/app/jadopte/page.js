@@ -18,7 +18,7 @@ export default function  AdoptPage() {
     const handleSearch = async ({type, location}) => {
         console.log('Recherche en cours pour:', type, location);
 
-        // Exemples fictifs à remplacer par u n appel d'API plus tard
+        // Exemples fictifs à remplacer par un appel d'API plus tard
 
         const filteredResults = [
             {name: 'Beaudelaire', type: 'chat', location: 'Paris'},
