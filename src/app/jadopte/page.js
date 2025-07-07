@@ -1,10 +1,19 @@
 'use client';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import SearchBar from '../components/searchbar';
 
 export default function  AdoptPage() {
     const [searchResults, setSearchResults] = useState([]);
+
+    useEffect(() => {
+        async function fetchAnimals() {
+            const res = await fetch('/api/animals');
+            const data = await res.json();
+            setSearchResults(data);
+        }
+        fetchAnimals();
+    }, []);
 
     const handleSearch = async ({type, location}) => {
         console.log('Recherche en cours pour:', type, location);
@@ -26,12 +35,12 @@ export default function  AdoptPage() {
             <SearchBar onSearch={handleSearch}/>
 
             <ul>
-                {searchResults.map((animal, index) => (
-                    <li key={index}>
-                        {animal.name} ({animal.type} - {animal.location})
+                {searchResults.map((animal) => (
+                    <li key={animal.id}>
+                        <img src={animal.image_url} alt={animal.type} width={100}/>
+                        {animal.name} ({animal.type} - {animal.location || 'N/A'})
                     </li>
-                ) 
-                )}
+                ))}
             </ul>
         </div>
     );
