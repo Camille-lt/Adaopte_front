@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav style={{ borderBottom: '1px solid #ccc', padding: '1rem' }}>
+    <nav style={{ borderBottom: '1px solid #333', padding: '1rem' }}>
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -51,7 +51,7 @@ export default function Navbar() {
           <ul style={{
             display: 'flex',
             listStyle: 'none',
-            gap: '1rem',
+            gap: '3rem',
             margin: 0,
             padding: 0
           }}>
@@ -61,6 +61,7 @@ export default function Navbar() {
             <li><Link href="/devenir-benevole">Devenir bénévole</Link></li>
             <li><Link href="/faire-un-don">Faire un don</Link></li>
           </ul>
+          
         )}
       </div>
 
@@ -105,7 +106,8 @@ export default function Navbar() {
       display: 'flex',
       flexDirection: 'column',
       gap: '3.5rem',
-      fontSize: '1.4rem'
+      fontSize: '1.4rem',
+      cursor: 'pointer'
     }}>
       <li><Link href="/" onClick={() => setIsOpen(false)}>Accueil</Link></li>
       <li><Link href="/jadopte" onClick={() => setIsOpen(false)}>J'adopte</Link></li>

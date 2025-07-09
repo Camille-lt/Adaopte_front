@@ -6,19 +6,20 @@ import SearchBar from '../components/searchbar';
 export default function  AdoptPage() {
     const [searchResults, setSearchResults] = useState([]);
 
-    const handleSearch = async ({type, location}) => {
-        console.log('Recherche en cours pour:', type, location);
+    const handleSearch = async ({ type, location }) => {
+  try {
+    const queryParams = new URLSearchParams();
+    if (type) queryParams.append('type', type);
+    if (location) queryParams.append('location', location);
 
-        // Exemples fictifs à remplacer par u n appel d'API plus tard
+    const res = await fetch(`/api/animals?${queryParams.toString()}`);
+    const data = await res.json();
 
-        const filteredResults = [
-            {name: 'Beaudelaire', type: 'chat', location: 'Paris'},
-            {name: 'Scoty', type: 'chien', location: 'Lyon'},
-        ].filter(
-            (animal) => (!type || animal.type.includes(type.toLowerCase())) && (!location || animal.location.toLowerCase().includes(location.toLowerCase()))
-        );
-        setSearchResults(filteredResults);
-    };
+    setSearchResults(data);
+  } catch (error) {
+    console.error("Erreur pendant la recherche :", error);
+  }
+};
 
     return (
         <div>
