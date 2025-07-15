@@ -19,7 +19,7 @@ export default function Home() {
 
 
   return (
-    <main style={{ maxWidth: '960px', margin: '0 auto', paddingTop: '2rem', paddingBottom: '2rem' }}>
+    <main style={{ maxWidth: '960px', margin: '0 auto', paddingTop: '2rem', paddingBottom: '4rem' }}>
       {/* Bannière avec texte à gauche, image à droite */}
       <div
         style={{
@@ -83,7 +83,8 @@ export default function Home() {
       <section
         style={{
           backgroundColor: '#F2CB9B',
-          padding: '1.5rem 1.5rem',
+          paddingTop:'1rem',
+          paddingBottom:'2.5rem',
           textAlign: 'center',
           borderRadius: '30px',
         }}
