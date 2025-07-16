@@ -11,9 +11,16 @@ export default function Home() {
 
 
   const handleVoirAnimaux = () => {
-    router.push('/animaux');
+    router.push('/jadopte');
   };
 
+ const handleAdopterAnimal = () => {
+    router.push('/guide-adoption');
+  };
+
+  const handleDevenirBenevole = () => {
+    router.push('/devenir-benevole');
+  };
 
   const bannerUrl = "https://i.pinimg.com/736x/eb/76/77/eb76777430dd97353bb23d1a92439df2.jpg"; // remplace par ta vraie URL
 
@@ -41,7 +48,7 @@ export default function Home() {
           }}
         >
           <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', color: '#F2785C', paddingBottom: '1rem', fontWeight: '700' }}>
-            Bienvenue sur Adaopte
+            Bienvenue <br/>sur Adaopte
           </h1>
           <p style={{ fontSize: '1.5rem', maxWidth: '500px', color: '#416d6c9e' }}>
             Donnons-leur autant qu'ils nous apportent.
@@ -94,12 +101,12 @@ export default function Home() {
         </h2>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           {/* Bouton vert (par défaut) */}
-          <Button onClick={handleVoirAnimaux}>Adopter un animal</Button>
+          <Button onClick={handleAdopterAnimal}>Adopter un animal</Button>
 
 
           {/* Bouton orange (style personnalisé) */}
           <Button
-            onClick={handleVoirAnimaux}
+            onClick={handleDevenirBenevole}
             style={{
               backgroundColor: '#F2785C',
               color: '#FFFFFF'
