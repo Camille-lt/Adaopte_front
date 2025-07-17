@@ -23,13 +23,13 @@ export default function FaireUnDon() {
 
   return (
     <main style={{ maxWidth: "600px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Faire un don</h1>
-      <p style={{ marginBottom: "1.5rem" }}>
+      <h1 style={{ color: '#46736E' }}>Faire un don</h1>
+      <p style={{ marginBottom: "1.5rem" , paddingTop:'1.5rem'}}>
         Votre soutien permet à notre refuge de sauver et soigner des animaux abandonnés. Chaque don compte 🐾
       </p>
 
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-        <label>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" ,boxShadow:' hsla(0, 18%, 59%, 0.47) 3px 3px 10px;', padding:'2rem', borderRadius:'15px',   }}>
+        <label style={{ color: '#46736E' }} >
           Prénom :
           <input
             type="text"
@@ -41,7 +41,7 @@ export default function FaireUnDon() {
           />
         </label>
 
-        <label>
+        <label style={{ color: '#46736E' }}>
           Email :
           <input
             type="email"
@@ -49,11 +49,11 @@ export default function FaireUnDon() {
             value={don.email}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "0.5rem", marginTop: "0.3rem" }}
+            style={{ width: "100%", padding: "0.5rem", marginTop: "0.3rem"}}
           />
         </label>
 
-        <label>
+        <label style={{ color: '#F2785C' }}>
           Montant (€) :
           <input
             type="number"
@@ -67,7 +67,7 @@ export default function FaireUnDon() {
           />
         </label>
 
-        <label>
+        <label style={{ color: '#F2785C' }}>
           Méthode de paiement :
           <select
             name="method"
@@ -82,14 +82,15 @@ export default function FaireUnDon() {
 
         <button type="submit" style={{
           backgroundColor: "#F2CB9B",
-          color: "#333",
+          color: '#46736E',
           padding: "0.75rem",
           border: "none",
           borderRadius: "5px",
           cursor: "pointer",
-          marginTop: "2rem"
+          marginTop: "2rem",
+          fontWeight:'bold'
         }}>
-          Faire un don
+          Faire un don ❤️
         </button>
       </form>
     </main>
