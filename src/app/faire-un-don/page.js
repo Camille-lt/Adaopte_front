@@ -28,7 +28,7 @@ export default function FaireUnDon() {
         Votre soutien permet à notre refuge de sauver et soigner des animaux abandonnés. Chaque don compte 🐾
       </p>
 
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" ,boxShadow:' hsla(0, 18%, 59%, 0.47) 3px 3px 10px;', padding:'2rem', borderRadius:'15px',   }}>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" ,boxShadow:' hsla(0, 18%, 59%, 0.47) 3px 3px 10px', padding:'2rem', borderRadius:'15px',   }}>
         <label style={{ color: '#46736E' }} >
           Prénom :
           <input
