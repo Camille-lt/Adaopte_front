@@ -15,28 +15,28 @@ export default function GuideAdoption({ animals = [], cities = [] }) {
         'https://i.pinimg.com/736x/e5/15/a5/e515a509fac7260f67ae42e844f8cc6a.jpg'
 
 
-    const steps = [
-        {
-            icon: <HandHeart size={50} color="#F2785C" />,
-            title: '1. Trouver votre compagnon',
-            text: "Parcourez notre base de données d'animaux disponibles et utilisez nos filtres pour trouver celui qui correspond à votre mode de vie.",
-        },
-        {
-            icon: <BookOpen size={40} color="#F2785C" />,
-            title: '2. Remplissez une demande',
-            text: "Soumettez votre formulaire d'adoption pour l'animal qui vous intéresse. Nous examinons chaque demande avec soin.",
-        },
-        {
-            icon: <Rabbit size={40} color="#F2785C" />,
-            title: "3. Rencontrez l'animal",
-            text: "Visitez le refuge pour rencontrer l'animal et voir si vous êtes compatibles. C'est une étape essentielle du processus.",
-        },
-        {
-            icon: <Home size={40} color="#F2785C" />,
-            title: '4. Bienvenue à la maison',
-            text: "Une fois votre demande approuvée, vous pouvez accueillir votre nouvel ami chez vous. Nous restons disponibles pour vous conseiller.",
-        },
-    ]
+const steps = [
+    {
+        icon: <HandHeart size={50} color="#F2785C" />,
+        title: '1. Trouver votre compagnon',
+        text: "Parcourez notre base de données d&apos;animaux disponibles et utilisez nos filtres pour trouver celui qui correspond à votre mode de vie.",
+    },
+    {
+        icon: <BookOpen size={40} color="#F2785C" />,
+        title: '2. Remplissez une demande',
+        text: "Soumettez votre formulaire d&apos;adoption pour l&apos;animal qui vous intéresse. Nous examinons chaque demande avec soin.",
+    },
+    {
+        icon: <Rabbit size={40} color="#F2785C" />,
+        title: "3. Rencontrez l&apos;animal",
+        text: "Visitez le refuge pour rencontrer l&apos;animal et voir si vous êtes compatibles. C&apos;est une étape essentielle du processus.",
+    },
+    {
+        icon: <Home size={40} color="#F2785C" />,
+        title: '4. Bienvenue à la maison',
+        text: "Une fois votre demande approuvée, vous pouvez accueillir votre nouvel ami chez vous. Nous restons disponibles pour vous conseiller.",
+    },
+]
 
 
     return (
