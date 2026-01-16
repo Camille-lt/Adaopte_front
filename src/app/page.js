@@ -23,7 +23,7 @@ export default function Home() {
     router.push('/devenir-benevole');
   };
 
-  const bannerUrl = "https://i.pinimg.com/736x/eb/76/77/eb76777430dd97353bb23d1a92439df2.jpg"; // remplace par ta vraie URL
+  // const bannerUrl = "https://i.pinimg.com/736x/eb/76/77/eb76777430dd97353bb23d1a92439df2.jpg"; // remplace par ta vraie URL
 
 
   return (
@@ -60,7 +60,7 @@ export default function Home() {
         {/* Image à droite */}
         <div style={{ flex: 1 }}>
           <Image
-            src={bannerUrl}
+            src="/adaopte-homepage.jpg"
             alt="Bannière animaux"
             width={900}
             height={500}
