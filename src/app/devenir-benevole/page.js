@@ -37,7 +37,7 @@ export default function DevenirBenevole({ volunteer = [] }) {
     }
 
     try {
-      const res = await fetch("http://localhost:3001/volunteer-application", {
+      const res = await fetch("https://adaopte-back.vercel.app/volunteer-application", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

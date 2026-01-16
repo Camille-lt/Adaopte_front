@@ -25,8 +25,8 @@ export default function AdoptionForm() {
         const fetchData = async () => {
             setLoading(true)
             try {
-                const resAnimals = await fetch('http://localhost:3001/animal')
-                const resCities = await fetch('http://localhost:3001/city')
+                const resAnimals = await fetch('https://adaopte-back.vercel.app/animal')
+                const resCities = await fetch('https://adaopte-back.vercel.app/city')
 
                 if (!resAnimals.ok || !resCities.ok) {
                     throw new Error('Erreur lors du chargement des données.')
@@ -61,7 +61,7 @@ export default function AdoptionForm() {
 
         try {
             // Étape 1 : créer l’adoptant
-            const adopterRes = await fetch('http://localhost:3001/adopter', {
+            const adopterRes = await fetch('https://adaopte-back.vercel.app/adopter', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -84,7 +84,7 @@ export default function AdoptionForm() {
             const adopter_id = adopterData.adopter_id
 
             // Étape 2 : créer l’adoption
-            const adoptionRes = await fetch('http://localhost:3001/adoption', {
+            const adoptionRes = await fetch('https://adaopte-back.vercel.app/adoption', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
