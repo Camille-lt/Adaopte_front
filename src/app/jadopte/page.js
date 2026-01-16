@@ -13,7 +13,7 @@ export default function AdoptPage() {
       if (type) queryParams.append('type', type);
       if (location) queryParams.append('location', location);
 
-const res = await fetch('https://adaopte-back.vercel.app/animal?${queryParams.toString()}');      const data = await res.json();
+const res = await fetch(`https://adaopte-back.vercel.app/animal?${queryParams.toString()}`);      const data = await res.json();
 
       setSearchResults(data);
     } catch (error) {
