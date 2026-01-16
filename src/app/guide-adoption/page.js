@@ -8,8 +8,8 @@ import Image from 'next/image'
 export default function GuideAdoption({ animals = [], cities = [] }) {
     const [showForm, setShowForm] = useState(false)
 
-    const bannerAdoptURL =
-        'https://i.pinimg.com/736x/e5/15/a5/e515a509fac7260f67ae42e844f8cc6a.jpg'
+    // const bannerAdoptURL =
+    //     'https://i.pinimg.com/736x/e5/15/a5/e515a509fac7260f67ae42e844f8cc6a.jpg'
 
     const steps = [
         {
@@ -49,7 +49,7 @@ export default function GuideAdoption({ animals = [], cities = [] }) {
                 }}
             >
                 <Image
-                    src={bannerAdoptURL}
+                    src="/guide-adoption.jpg"
                     alt="Bannière animaux"
                     width={500}
                     height={500}

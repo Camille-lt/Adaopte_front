@@ -15,8 +15,8 @@ const inputStyle = {
 export default function DevenirBenevole({ volunteer = [] }) {
   const [formVisible, setFormVisible] = useState(false);
 
-  const bannerAdoptURL =
-    "https://i.pinimg.com/736x/b6/f3/63/b6f363a737f49fad974df53378308e42.jpg";
+  // const bannerAdoptURL =
+  //   "https://i.pinimg.com/736x/b6/f3/63/b6f363a737f49fad974df53378308e42.jpg";
 
   // Fonction asynchrone pour gérer la soumission du formulaire
   async function handleSubmit(event) {
@@ -85,7 +85,7 @@ export default function DevenirBenevole({ volunteer = [] }) {
       </h1>
 
       <Image
-        src={bannerAdoptURL}
+        src="/devenir-benevole.jpg"
         alt="Bannière animaux"
         width={900}
         height={500}
