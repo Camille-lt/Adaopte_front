@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import SearchBar from '../components/searchbar';
+import Image from 'next/image';
 
 export default function AdoptPage() {
   const [searchResults, setSearchResults] = useState([]);
@@ -13,7 +14,7 @@ export default function AdoptPage() {
       if (type) queryParams.append('type', type);
       if (location) queryParams.append('location', location);
 
-const res = await fetch(`https://adaopte-back.vercel.app/animal?${queryParams.toString()}`);     const data = await res.json();
+      const res = await fetch(`https://adaopte-back.vercel.app/animal?${queryParams.toString()}`); const data = await res.json();
 
       setSearchResults(data);
     } catch (error) {
@@ -38,8 +39,8 @@ const res = await fetch(`https://adaopte-back.vercel.app/animal?${queryParams.to
   const animalsToDisplay = searchResults.length > 0 ? searchResults : animals;
 
   return (
-    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '1rem', paddingTop:'2rem', paddingBottom:'4rem' }}>
-      <h1 style={{ textAlign: 'center', color:'#46736E' }}>Adopter un animal</h1>
+    <div style={{ maxWidth: 1200, margin: '0 auto', padding: '1rem', paddingTop: '2rem', paddingBottom: '4rem' }}>
+      <h1 style={{ textAlign: 'center', color: '#46736E' }}>Adopter un animal</h1>
       <SearchBar onSearch={handleSearch} />
 
       <div style={{
@@ -51,22 +52,24 @@ const res = await fetch(`https://adaopte-back.vercel.app/animal?${queryParams.to
         {animalsToDisplay.map((animal, index) => (
           <article key={index} style={{
             // border: '1px solid #ccc',
-            borderRadius:'8px',
+            borderRadius: '8px',
             padding: '1rem',
             boxShadow: '2px 3px 10px rgba(0, 0, 0, 0.12)',
             backgroundColor: 'rgba(241, 238, 230, 0.42)'
           }}>
-            <img
+            <Image
               src={animal.img_url}
               alt={animal.name}
-              style={{ width: '100%', borderRadius: '6px', objectFit: 'cover', height: 180, marginBottom:'0.5rem' }}
+              width={900}
+              height={500}
+              style={{ width: '100%', borderRadius: '6px', objectFit: 'cover', height: 180, marginBottom: '0.5rem' }}
             />
-            <h2 style={{ marginTop: '0.5rem', paddingBottom:'0.5rem', color:'rgb(242, 120, 92)', fontSize:'2rem', fontWeight:'800' }}>{animal.name}</h2>
+            <h2 style={{ marginTop: '0.5rem', paddingBottom: '0.5rem', color: 'rgb(242, 120, 92)', fontSize: '2rem', fontWeight: '800' }}>{animal.name}</h2>
             <p><strong>Race :</strong> {animal.breed}</p>
             <p><strong>Type :</strong> {animal.type}</p>
             <p><strong>Âge :</strong> {getAge(animal.date_birth)}</p>
             <p><strong>Sexe :</strong> {animal.sexe}</p>
-            <p style={{ marginTop: '1rem',color: '#46736E', paddingTop:'0.5rem', paddingBottom:'1rem' }}>{animal.description}</p>
+            <p style={{ marginTop: '1rem', color: '#46736E', paddingTop: '0.5rem', paddingBottom: '1rem' }}>{animal.description}</p>
           </article>
         ))}
       </div>

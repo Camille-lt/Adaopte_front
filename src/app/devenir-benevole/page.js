@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 // Style des inputs, placé en haut
 const inputStyle = {
@@ -83,9 +84,11 @@ export default function DevenirBenevole({ volunteer = [] }) {
         Devenir Bénévole
       </h1>
 
-      <img
+      <Image
         src={bannerAdoptURL}
         alt="Bannière animaux"
+        width={900}
+        height={500}
         style={{
           width: "928px",
           height: "500px",

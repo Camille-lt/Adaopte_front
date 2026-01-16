@@ -4,6 +4,7 @@
 
 import { useRouter } from 'next/navigation';
 import Button from './components/button';
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
     router.push('/jadopte');
   };
 
- const handleAdopterAnimal = () => {
+  const handleAdopterAnimal = () => {
     router.push('/guide-adoption');
   };
 
@@ -48,7 +49,7 @@ export default function Home() {
           }}
         >
           <h1 style={{ fontSize: '3rem', marginBottom: '0.5rem', color: '#F2785C', paddingBottom: '1rem', fontWeight: '700' }}>
-            Bienvenue <br/>sur Adaopte
+            Bienvenue <br />sur Adaopte
           </h1>
           <p style={{ fontSize: '1.5rem', maxWidth: '500px', color: '#416d6c9e' }}>
             Donnons-leur autant qu'ils nous apportent.
@@ -58,9 +59,11 @@ export default function Home() {
 
         {/* Image à droite */}
         <div style={{ flex: 1 }}>
-          <img
+          <Image
             src={bannerUrl}
             alt="Bannière animaux"
+            width={900}
+            height={500}
             style={{
               width: '100%',
               height: '100%',
@@ -76,8 +79,8 @@ export default function Home() {
       <section style={{ backgroundColor: '#FFFFFF', padding: '3rem 2rem' }}>
         <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#46736E' }}>Notre mission</h2>
         <p style={{ fontSize: '1.1rem', maxWidth: '700px', paddingBottom: '2rem', color: '#46736E' }}>
-          Chaque jour, des milliers d’animaux cherchent une seconde chance. Chez Adaopte,
-          nous croyons en l’amour, la bienveillance et l’engagement pour offrir à chaque
+          Chaque jour, des milliers d&apos;animaux cherchent une seconde chance. Chez Adaopte,
+          nous croyons en l&apos;amour, la bienveillance et l&apos;engagement pour offrir à chaque
           animal un foyer aimant.
         </p>
         <Button onClick={handleVoirAnimaux} style={{ marginTop: '2rem', gap: '1.5 rem' }}>
@@ -90,8 +93,8 @@ export default function Home() {
       <section
         style={{
           backgroundColor: '#F2CB9B',
-          paddingTop:'1rem',
-          paddingBottom:'2.5rem',
+          paddingTop: '1rem',
+          paddingBottom: '2.5rem',
           textAlign: 'center',
           borderRadius: '30px',
         }}
