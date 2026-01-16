@@ -160,8 +160,7 @@ export default function GuideAdoption({ animals = [], cities = [] }) {
                    {showForm ? 'Masquer le formulaire' : 'Afficher le formulaire d’adoption'}
                </button>
            </div>
-
-
+                 
            {showForm && (
                <div style={{ marginBottom: '5rem' }}>
                    <AdoptionForm animals={animals} cities={cities} />

@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav style={{ borderBottom: '1px solid #333', padding: '1rem' }}>
       <div style={{
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center'
       }}>
 
