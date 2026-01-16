@@ -52,7 +52,7 @@ export default function Home() {
             Bienvenue <br />sur Adaopte
           </h1>
           <p style={{ fontSize: '1.5rem', maxWidth: '500px', color: '#416d6c9e' }}>
-            Donnons-leur autant qu'ils nous apportent.
+            Donnons-leur autant qu&apos;ils nous apportent.
           </p>
         </div>
 
