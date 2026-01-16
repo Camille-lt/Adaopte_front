@@ -1,50 +1,44 @@
 'use client'
 
-
 import { useState } from 'react'
 import { HandHeart, BookOpen, Home, Rabbit } from 'lucide-react'
 import AdoptionForm from '../components/adoptionForm'
 import Image from 'next/image'
 
-
 export default function GuideAdoption({ animals = [], cities = [] }) {
     const [showForm, setShowForm] = useState(false)
-
 
     const bannerAdoptURL =
         'https://i.pinimg.com/736x/e5/15/a5/e515a509fac7260f67ae42e844f8cc6a.jpg'
 
-
-const steps = [
-    {
-        icon: <HandHeart size={50} color="#F2785C" />,
-        title: '1. Trouver votre compagnon',
-        text: "Parcourez notre base de données d&apos;animaux disponibles et utilisez nos filtres pour trouver celui qui correspond à votre mode de vie.",
-    },
-    {
-        icon: <BookOpen size={40} color="#F2785C" />,
-        title: '2. Remplissez une demande',
-        text: "Soumettez votre formulaire d&apos;adoption pour l&apos;animal qui vous intéresse. Nous examinons chaque demande avec soin.",
-    },
-    {
-        icon: <Rabbit size={40} color="#F2785C" />,
-        title: "3. Rencontrez l&apos;animal",
-        text: "Visitez le refuge pour rencontrer l&apos;animal et voir si vous êtes compatibles. C&apos;est une étape essentielle du processus.",
-    },
-    {
-        icon: <Home size={40} color="#F2785C" />,
-        title: '4. Bienvenue à la maison',
-        text: "Une fois votre demande approuvée, vous pouvez accueillir votre nouvel ami chez vous. Nous restons disponibles pour vous conseiller.",
-    },
-]
-
+    const steps = [
+        {
+            icon: <HandHeart size={50} color="#F2785C" />,
+            title: '1. Trouver votre compagnon',
+            text: "Parcourez notre base de données d&apos;animaux disponibles et utilisez nos filtres pour trouver celui qui correspond à votre mode de vie.",
+        },
+        {
+            icon: <BookOpen size={40} color="#F2785C" />,
+            title: '2. Remplissez une demande',
+            text: "Soumettez votre formulaire d&apos;adoption pour l&apos;animal qui vous intéresse. Nous examinons chaque demande avec soin.",
+        },
+        {
+            icon: <Rabbit size={40} color="#F2785C" />,
+            title: "3. Rencontrez l&apos;animal",
+            text: "Visitez le refuge pour rencontrer l&apos;animal et voir si vous êtes compatibles. C&apos;est une étape essentielle du processus.",
+        },
+        {
+            icon: <Home size={40} color="#F2785C" />,
+            title: '4. Bienvenue à la maison',
+            text: "Une fois votre demande approuvée, vous pouvez accueillir votre nouvel ami chez vous. Nous restons disponibles pour vous conseiller.",
+        },
+    ]
 
     return (
         <main style={{ maxWidth: 960, margin: '0 auto', paddingBottom: '2rem' }}>
             <h1 style={{ textAlign: 'center', marginBottom: '2rem', color: '#46736E' }}>
-                Guide de l'adoption
+                Guide de l&apos;adoption
             </h1>
-
 
             <div
                 style={{
@@ -66,7 +60,6 @@ const steps = [
                         borderRadius: '30px',
                     }}
                 />
-
 
                 <div
                     style={{
@@ -94,7 +87,6 @@ const steps = [
                 </div>
             </div>
 
-
             <section style={{ textAlign: 'left' }}>
                 <h3 style={{ color: '#F2785C', marginBottom: '1.5rem', paddingTop: '3.5rem' }}>COMMENT ÇA MARCHE</h3>
                 <p style={{ paddingBottom: '1.5rem', lineHeight: 1.5, color: '#555555' }}>
@@ -105,7 +97,6 @@ const steps = [
                 <p style={{ paddingBottom: '1.5rem', color: '#46736E', fontWeight: 'bold', paddingTop: '1.5rem', paddingBottom: '3rem', }}>
                     Voici notre processus d&apos;adoption en quelques étapes simples :
                 </p>
-
 
                 <div
                     style={{
@@ -146,7 +137,6 @@ const steps = [
                 </div>
             </section>
 
-
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                 <button
                     onClick={() => setShowForm(!showForm)}
@@ -160,8 +150,8 @@ const steps = [
                         cursor: 'pointer',
                     }}
                 >
-{showForm ? 'Masquer le formulaire' : 'Afficher le formulaire d&apos;adoption'}            
-    </button>
+                    {showForm ? 'Masquer le formulaire' : 'Afficher le formulaire d&apos;adoption'}
+                </button>
             </div>
 
             {showForm && (
