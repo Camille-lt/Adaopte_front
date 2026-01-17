@@ -62,7 +62,7 @@ export default function AdoptPage() {
               alt={animal.name}
               width={900}
               height={500}
-              style={{ width: '100%', borderRadius: '6px', objectFit: 'cover', height: 180, marginBottom: '0.5rem' }}
+              style={{ width: '100%', borderRadius: '6px', objectFit: 'cover', height: 180, marginBottom: '0.5rem', objectPosition: 'top' }}
             />
             <h2 style={{ marginTop: '0.5rem', paddingBottom: '0.5rem', color: 'rgb(242, 120, 92)', fontSize: '2rem', fontWeight: '800' }}>{animal.name}</h2>
             <p><strong>Race :</strong> {animal.breed}</p>
