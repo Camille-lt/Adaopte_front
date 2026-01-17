@@ -152,7 +152,7 @@ const steps = [
                 >
                     {showForm ? 'Masquer le formulaire' : "Afficher le formulaire d'adoption"}
                 </button>
-            </div>
+            </div> 
 
             {showForm && (
                 <div style={{ marginBottom: '5rem' }}>
