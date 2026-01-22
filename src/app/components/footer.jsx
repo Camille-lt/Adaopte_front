@@ -42,7 +42,7 @@ export default function Footer() {
             116 rue du Faubourg Saint-Martin<br />
             75010 Paris, France<br />
             Email : <a href="mailto:contact@adaopte.fr" style={{ color: '#FFFFFF' }}>contact@adaopte.fr</a><br />
-            Tél : +33 1 23 45 67 89
+            Tél : +33 1 00 00 00 00
           </p>
         </div>
       </div>
