@@ -11,12 +11,14 @@ export default function SearchBar({ onSearch }) {
     onSearch({ type, location });
   };
 
+  const handleReset = () => {
+    setType('');
+    setLocation('');
+    onSearch({ type: '', location: '' });
+  };
+
   return (
-    <div style={{
-      width: '100%',
-      maxWidth: '600px', // Limite la largeur sur desktop
-      margin: '0 auto'    // Centre horizontalement
-    }}>
+    <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto' }}>
       <form
         onSubmit={handleSubmit}
         style={{
@@ -37,27 +39,43 @@ export default function SearchBar({ onSearch }) {
           onChange={(e) => setType(e.target.value)}
           style={inputStyle}
         />
+
         <input
           type="text"
           placeholder="Ville"
+          list="villes-suggestions"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
           style={inputStyle}
         />
-        <button
-          type="submit"
-          style={{
-            padding: '0.75rem',
-            backgroundColor: '#46736E',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontWeight: 'bold'
-          }}
-        >
-          Rechercher
-        </button>
+
+        <datalist id="villes-suggestions">
+          <option value="Paris" />
+          <option value="Lyon" />
+          <option value="Marseille" />
+        </datalist>
+
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <button
+            type="submit"
+            style={{ ...buttonStyle, backgroundColor: '#46736E', flex: 2 }}
+          >
+            Rechercher
+          </button>
+
+          <button
+            type="button"
+            onClick={handleReset}
+            style={{
+              ...buttonStyle,
+              backgroundColor: '#ccc',
+              flex: 1,
+              color: '#333',
+            }}
+          >
+            Effacer
+          </button>
+        </div>
       </form>
     </div>
   );
@@ -69,4 +87,14 @@ const inputStyle = {
   borderRadius: '4px',
   fontSize: '1rem',
   width: '100%',
+};
+
+const buttonStyle = {
+  padding: '0.75rem',
+  color: '#fff',
+  border: 'none',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  transition: 'opacity 0.2s',
 };
